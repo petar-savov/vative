@@ -10,10 +10,10 @@ mypy vative/ tests/
 
 # Check for linting issues with pylint
 echo "Checking for linting issues with pylint..."
-flake8 vative/ tests/ --max-line-length=120
+flake8 vative/ tests/ --max-line-length=127
 
 # Verify code formatting with black
 echo "Checking code formatting with black..."
-black vative/ tests/ --check --line-length=120 
+black vative/ tests/ --check --line-length=127 
 
 echo "All checks completed."
