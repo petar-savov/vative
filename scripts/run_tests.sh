@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Stop the script on any error
+set -e
+
 # Run pytest for testing
 echo "Running tests with pytest..."
 pytest
