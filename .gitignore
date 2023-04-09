@@ -1,0 +1,5 @@
+.*
+!.gitignore
+!.flake8
+/venv/
+__pycache__/
