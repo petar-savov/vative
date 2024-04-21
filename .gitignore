@@ -1,6 +1,6 @@
 .*
 !.gitignore
-!.flake8
+!.pylintrc
 !.github/
 /venv/
 __pycache__/
