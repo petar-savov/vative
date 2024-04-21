@@ -1,3 +1,5 @@
-polars==0.20.2
-pydantic==2.5.3
-scipy==1.11.4
+numpy==1.26.4
+polars==0.20.22
+pydantic==2.7.0
+pydantic_core==2.18.1
+scipy==1.13.0

@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as si
 
 
-def black_scholes(S, K, T, r, sigma, option_type="call"):
+def black_scholes(S: float, K: float, T: float, r: float, sigma: float, option_type: str = "call") -> float:
     """
     Calculate the price of a European call or put option using the Black-Scholes model.
 

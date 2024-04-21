@@ -3,20 +3,19 @@
 # Stop the script on any error
 set -e
 
-# Run pytest for testing
-echo "Running tests with pytest..."
-pytest
+LINE_LENGTH=140
 
-# Run mypy for static type checking
 echo "Running static type checking with mypy..."
 mypy vative/ tests/
 
-# Check for linting issues with pylint
-echo "Checking for linting issues with pylint..."
-flake8 vative/ tests/ --max-line-length=127
+echo "Running linting checks"
+ruff check vative/ tests/ --line-length=$LINE_LENGTH
+pylint vative/ tests/ --rcfile=.pylintrc
 
-# Verify code formatting with black
 echo "Checking code formatting with black..."
-black vative/ tests/ --check --line-length=127 
+black vative/ tests/ --check --line-length=$LINE_LENGTH
+
+echo "Running tests with pytest..."
+pytest .
 
 echo "All checks completed."
